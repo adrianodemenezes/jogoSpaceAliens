@@ -1,0 +1,54 @@
+using System;
+
+    class Folker
+    {
+    private int l, c, aceleracao;
+    private String direcao, shoot;
+
+    public Folker()
+    {
+        this.l = 30;
+        this.c = 15;
+        this.direcao = "A";
+        this.aceleracao = 0;
+        this.shoot = "*";
+    }
+    public void setL(int x)
+    {
+        this.l += x;
+        if (this.l > 29)
+        {
+            this.l = 0;
+        }
+        if (this.l < 0)
+        {
+            this.l = 29;
+        }
+    }
+    public int getL()
+    {
+        return (this.l);
+    }
+
+    public void setC(int x)
+    {
+        ConsoleKeyInfo tecla = Console.ReadKey();
+        if (tecla.KeyChar == 'd' || tecla.KeyChar == 'D' || tecla.KeyChar == 'a' || tecla.KeyChar == 'A')
+        this.c += x;
+        if (this.c > 29)
+        {
+            this.c = 0;
+        }
+        if (this.c < 0)
+        {
+            this.c = 29;
+        }
+    }
+    public int getC()
+    {
+        return (this.c);
+    }
+
+
+}
+
